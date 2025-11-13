@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Admin - View Orders | MC Mobiles</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" rel="stylesheet">
+    <style> 
+        body { font-family: 'Inter', sans-serif; } 
+    </style>
+</head>
+<body class="bg-gray-100">
+    <div class="flex min-h-screen">
+        <!-- Sidebar -->
+        <aside class="sidebar bg-gray-800 text-white w-64 space-y-6 py-7 px-2 fixed inset-y-0 left-0 transform -translate-x-full md:relative md:translate-x-0 transition duration-200 ease-in-out">
+            <a href="admin.html" class="text-white text-2xl font-extrabold px-4">MC Admin</a>
+            <nav>
+                <a href="admin.html" class="flex items-center space-x-2 py-3 px-4 rounded-lg hover:bg-gray-700 transition duration-200">
+                    <i class="fas fa-tachometer-alt"></i><span>Dashboard</span>
+                </a>
+                <a href="admin-products.html" class="flex items-center space-x-2 py-3 px-4 rounded-lg hover:bg-gray-700 transition duration-200">
+                    <i class="fas fa-box"></i><span>Manage Products</span>
+                </a>
+                <a href="admin-orders.html" class="flex items-center space-x-2 py-3 px-4 rounded-lg bg-gray-900 text-white">
+                    <i class="fas fa-shopping-cart"></i><span>View Orders</span>
+                </a>
+                <a href="index.html" class="flex items-center space-x-2 py-3 px-4 rounded-lg hover:bg-gray-700 transition duration-200 absolute bottom-5 w-60">
+                    <i class="fas fa-sign-out-alt"></i><span>Logout</span>
+                </a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="flex-1 p-10">
+            <h1 class="text-4xl font-bold text-gray-800">Customer Orders</h1>
+
+            <div class="mt-8 bg-white p-8 rounded-2xl shadow-lg">
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left">
+                        <thead class="bg-gray-50 border-b-2 border-gray-200">
+                            <tr>
+                                <th class="p-4 text-sm font-semibold text-gray-600 tracking-wider">Order ID</th>
+                                <th class="p-4 text-sm font-semibold text-gray-600 tracking-wider">Customer</th>
+                                <th class="p-4 text-sm font-semibold text-gray-600 tracking-wider">Phone</th>
+                                <th class="p-4 text-sm font-semibold text-gray-600 tracking-wider">Total (LKR)</th>
+                                <th class="p-4 text-sm font-semibold text-gray-600 tracking-wider">Status</th>
+                                <th class="p-4 text-sm font-semibold text-gray-600 tracking-wider">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-gray-200">
+                            <!-- Example order row 1 -->
+                            <tr class="hover:bg-gray-50">
+                                <td class="p-4 whitespace-nowrap font-medium text-gray-800">#1001</td>
+                                <td class="p-4 whitespace-nowrap text-gray-600">Michael</td>
+                                <td class="p-4 whitespace-nowrap text-gray-600">0771234567</td>
+                                <td class="p-4 whitespace-nowrap text-gray-600">240,000</td>
+                                <td class="p-4 whitespace-nowrap">
+                                    <span class="badge pending bg-yellow-100 text-yellow-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">Pending</span>
+                                </td>
+                                <td class="p-4 whitespace-nowrap">
+                                    <button class="text-green-600 hover:text-green-900 font-semibold mr-4">Mark as Shipped</button>
+                                    <button class="text-red-600 hover:text-red-900 font-semibold">Cancel</button>
+                                </td>
+                            </tr>
+                             <!-- Example order row 2 -->
+                            <tr class="hover:bg-gray-50">
+                                <td class="p-4 whitespace-nowrap font-medium text-gray-800">#1002</td>
+                                <td class="p-4 whitespace-nowrap text-gray-600">Jane Doe</td>
+                                <td class="p-4 whitespace-nowrap text-gray-600">0719876543</td>
+                                <td class="p-4 whitespace-nowrap text-gray-600">450,000</td>
+                                <td class="p-4 whitespace-nowrap">
+                                    <span class="badge shipped bg-green-100 text-green-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">Shipped</span>
+                                </td>
+                                <td class="p-4 whitespace-nowrap">
+                                    <button class="text-gray-400 font-semibold cursor-not-allowed" disabled>Mark as Shipped</button>
+                                </td>
+                            </tr>
+                             <!-- Example order row 3 -->
+                            <tr class="hover:bg-gray-50">
+                                <td class="p-4 whitespace-nowrap font-medium text-gray-800">#1003</td>
+                                <td class="p-4 whitespace-nowrap text-gray-600">John Smith</td>
+                                <td class="p-4 whitespace-nowrap text-gray-600">0765551234</td>
+                                <td class="p-4 whitespace-nowrap text-gray-600">105,000</td>
+                                <td class="p-4 whitespace-nowrap">
+                                     <span class="badge canceled bg-red-100 text-red-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">Canceled</span>
+                                </td>
+                                <td class="p-4 whitespace-nowrap">
+                                     <button class="text-gray-400 font-semibold cursor-not-allowed" disabled>N/A</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
+

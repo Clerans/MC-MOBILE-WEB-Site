@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage - MC Mobiles</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+
+    <!-- Header Navigation -->
+    <header class="header bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <h1 class="logo text-3xl font-bold text-indigo-600">
+                <a href="index.html">MC Mobiles</a>
+            </h1>
+            <nav class="hidden md:flex items-center space-x-8">
+                <a href="index.html" class="text-gray-900 font-semibold hover:text-indigo-600 transition-colors">Home</a>
+                <a href="products.html" class="text-gray-600 hover:text-indigo-600 transition-colors">Products</a>
+                <a href="contact.html" class="text-gray-600 hover:text-indigo-600 transition-colors">Contact</a>
+                <a href="about.html" class="text-gray-600 hover:text-indigo-600 transition-colors">About</a>
+            </nav>
+            <div class="flex items-center space-x-4">
+                 <a href="cart.html" class="relative text-gray-600 hover:text-indigo-600 transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+                    </svg>
+                    <span id="cart-count" class="absolute -top-2 -right-2 bg-indigo-600 text-white text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center">3</span>
+                </a>
+                <a href="my-orders.html" class="text-gray-600 hover:text-indigo-600 transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero bg-indigo-600 text-white py-20 md:py-32">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-4xl md:text-6xl font-extrabold leading-tight">Welcome to MC Mobiles</h2>
+                <p class="mt-4 text-lg md:text-xl text-indigo-200 max-w-2xl mx-auto">Your one-stop shop for the latest mobile phones and cutting-edge accessories.</p>
+                <a href="products.html" class="btn-primary mt-8 inline-block bg-white text-indigo-600 font-semibold py-3 px-8 rounded-lg shadow-lg hover:bg-gray-100 transition-transform transform hover:scale-105 duration-300">
+                    Shop Now
+                </a>
+            </div>
+        </section>
+
+        <!-- Featured Phones Section -->
+        <section class="products-section container mx-auto px-6 py-16">
+            <h3 class="text-3xl font-bold text-center text-gray-900 mb-12">Featured Phones</h3>
+            <div class="product-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Product Card 1 -->
+                <div class="product-card bg-white rounded-xl shadow-lg overflow-hidden group">
+                    <img src="https://placehold.co/600x600/e2e8f0/334155?text=iPhone+14" alt="iPhone 14" class="w-full h-56 object-cover group-hover:opacity-80 transition-opacity"/>
+                    <div class="p-6">
+                        <h4 class="text-xl font-semibold text-gray-900">iPhone 14</h4>
+                        <p class="mt-2 text-lg font-bold text-indigo-600">Rs. 120,000</p>
+                        <button class="mt-4 w-full bg-indigo-600 text-white font-semibold py-2 rounded-lg hover:bg-indigo-700 transition-colors">Add to Cart</button>
+                    </div>
+                </div>
+                <!-- Product Card 2 -->
+                <div class="product-card bg-white rounded-xl shadow-lg overflow-hidden group">
+                    <img src="https://placehold.co/600x600/e2e8f0/334155?text=Galaxy+S22" alt="Samsung Galaxy S22" class="w-full h-56 object-cover group-hover:opacity-80 transition-opacity"/>
+                    <div class="p-6">
+                        <h4 class="text-xl font-semibold text-gray-900">Samsung Galaxy S22</h4>
+                        <p class="mt-2 text-lg font-bold text-indigo-600">Rs. 105,000</p>
+                        <button class="mt-4 w-full bg-indigo-600 text-white font-semibold py-2 rounded-lg hover:bg-indigo-700 transition-colors">Add to Cart</button>
+                    </div>
+                </div>
+                <!-- Product Card 3 -->
+                <div class="product-card bg-white rounded-xl shadow-lg overflow-hidden group">
+                    <img src="https://placehold.co/600x600/e2e8f0/334155?text=Pixel+6" alt="Google Pixel 6" class="w-full h-56 object-cover group-hover:opacity-80 transition-opacity"/>
+                    <div class="p-6">
+                        <h4 class="text-xl font-semibold text-gray-900">Google Pixel 6</h4>
+                        <p class="mt-2 text-lg font-bold text-indigo-600">Rs. 85,000</p>
+                        <button class="mt-4 w-full bg-indigo-600 text-white font-semibold py-2 rounded-lg hover:bg-indigo-700 transition-colors">Add to Cart</button>
+                    </div>
+                </div>
+                <!-- Product Card 4 -->
+                <div class="product-card bg-white rounded-xl shadow-lg overflow-hidden group">
+                    <img src="https://placehold.co/600x600/e2e8f0/334155?text=OnePlus+10" alt="OnePlus 10" class="w-full h-56 object-cover group-hover:opacity-80 transition-opacity"/>
+                    <div class="p-6">
+                        <h4 class="text-xl font-semibold text-gray-900">OnePlus 10</h4>
+                        <p class="mt-2 text-lg font-bold text-indigo-600">Rs. 95,000</p>
+                        <button class="mt-4 w-full bg-indigo-600 text-white font-semibold py-2 rounded-lg hover:bg-indigo-700 transition-colors">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2025 MC Mobiles. All rights reserved.</p>
+            <div class="mt-4 flex justify-center space-x-6">
+                <a href="#" class="hover:text-indigo-400">Facebook</a>
+                <a href="#" class="hover:text-indigo-400">Twitter</a>
+                <a href="#" class="hover:text-indigo-400">Instagram</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
+

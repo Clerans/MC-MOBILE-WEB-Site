@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - MC Mobiles</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+
+    <!-- Header Navigation -->
+    <header class="header bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <h1 class="logo text-3xl font-bold text-indigo-600">
+                <a href="index.html">MC Mobiles</a>
+            </h1>
+            <nav class="hidden md:flex items-center space-x-8">
+                <a href="index.html" class="text-gray-600 hover:text-indigo-600 transition-colors">Home</a>
+                <a href="products.html" class="text-gray-600 hover:text-indigo-600 transition-colors">Products</a>
+                <a href="contact.html" class="text-gray-600 hover:text-indigo-600 transition-colors">Contact</a>
+                <a href="about.html" class="text-gray-900 font-semibold hover:text-indigo-600 transition-colors">About</a>
+            </nav>
+            <div class="flex items-center space-x-4">
+                 <a href="cart.html" class="relative text-gray-600 hover:text-indigo-600 transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+                    </svg>
+                    <span id="cart-count" class="absolute -top-2 -right-2 bg-indigo-600 text-white text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center">3</span>
+                </a>
+                <a href="my-orders.html" class="text-gray-600 hover:text-indigo-600 transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-6 py-16">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-4xl font-extrabold text-gray-900 sm:text-5xl">
+                About MC Mobiles
+            </h2>
+            <p class="mt-6 text-xl text-gray-600 leading-8">
+                We are one of the leading mobile shops in your area, offering quality and trust since <span class="font-bold text-indigo-600">2010</span>. Our mission is to provide the latest technology with the best customer service, ensuring every customer finds the perfect device to fit their lifestyle and budget.
+            </p>
+        </div>
+
+        <div class="mt-20 max-w-lg mx-auto grid gap-8 lg:grid-cols-3 lg:max-w-none">
+            <!-- Feature 1 -->
+            <div class="flex flex-col rounded-2xl shadow-lg overflow-hidden">
+                <div class="flex-shrink-0 bg-indigo-600 p-6 text-white flex items-center justify-center h-32">
+                     <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                </div>
+                <div class="flex-1 bg-white p-6 flex flex-col justify-between">
+                    <div class="flex-1">
+                        <h3 class="mt-2 text-xl font-semibold text-gray-900">Quality Products</h3>
+                        <p class="mt-3 text-base text-gray-500">
+                            We source only the best devices from trusted brands to ensure you receive a top-quality, reliable product every time.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- Feature 2 -->
+            <div class="flex flex-col rounded-2xl shadow-lg overflow-hidden">
+                 <div class="flex-shrink-0 bg-indigo-600 p-6 text-white flex items-center justify-center h-32">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                    </svg>
+                </div>
+                <div class="flex-1 bg-white p-6 flex flex-col justify-between">
+                    <div class="flex-1">
+                        <h3 class="mt-2 text-xl font-semibold text-gray-900">Expert Service</h3>
+                        <p class="mt-3 text-base text-gray-500">
+                            Our knowledgeable staff are passionate about technology and are here to help you with any questions or issues you may have.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- Feature 3 -->
+            <div class="flex flex-col rounded-2xl shadow-lg overflow-hidden">
+                 <div class="flex-shrink-0 bg-indigo-600 p-6 text-white flex items-center justify-center h-32">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                </div>
+                <div class="flex-1 bg-white p-6 flex flex-col justify-between">
+                    <div class="flex-1">
+                        <h3 class="mt-2 text-xl font-semibold text-gray-900">Customer Trust</h3>
+                        <p class="mt-3 text-base text-gray-500">
+                           Building lasting relationships with our customers is our top priority. We've been a trusted name in the community for over a decade.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer bg-gray-900 text-white py-12 mt-12">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2025 MC Mobiles. All rights reserved.</p>
+            <div class="mt-4 flex justify-center space-x-6">
+                <a href="#" class="hover:text-indigo-400">Facebook</a>
+                <a href="#" class="hover:text-indigo-400">Twitter</a>
+                <a href="#" class="hover:text-indigo-400">Instagram</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
+

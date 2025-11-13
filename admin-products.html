@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Admin - Manage Products | MC Mobiles</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" rel="stylesheet">
+    <style> 
+        body { font-family: 'Inter', sans-serif; } 
+        .table-img { width: 50px; height: 50px; object-fit: cover; border-radius: 0.5rem; }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <div class="flex min-h-screen">
+        <!-- Sidebar -->
+        <aside class="sidebar bg-gray-800 text-white w-64 space-y-6 py-7 px-2 fixed inset-y-0 left-0 transform -translate-x-full md:relative md:translate-x-0 transition duration-200 ease-in-out">
+            <a href="admin.html" class="text-white text-2xl font-extrabold px-4">MC Admin</a>
+            <nav>
+                <a href="admin.html" class="flex items-center space-x-2 py-3 px-4 rounded-lg hover:bg-gray-700 transition duration-200">
+                    <i class="fas fa-tachometer-alt"></i><span>Dashboard</span>
+                </a>
+                <a href="admin-products.html" class="flex items-center space-x-2 py-3 px-4 rounded-lg bg-gray-900 text-white">
+                    <i class="fas fa-box"></i><span>Manage Products</span>
+                </a>
+                <a href="admin-orders.html" class="flex items-center space-x-2 py-3 px-4 rounded-lg hover:bg-gray-700 transition duration-200">
+                    <i class="fas fa-shopping-cart"></i><span>View Orders</span>
+                </a>
+                <a href="index.html" class="flex items-center space-x-2 py-3 px-4 rounded-lg hover:bg-gray-700 transition duration-200 absolute bottom-5 w-60">
+                    <i class="fas fa-sign--alt"></i><span>Logout</span>
+                </a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="flex-1 p-10">
+            <h1 class="text-4xl font-bold text-gray-800">Manage Products</h1>
+            
+            <!-- Add Product Form -->
+            <div class="mt-8 bg-white p-8 rounded-2xl shadow-lg">
+                <h3 class="text-2xl font-bold text-gray-900 mb-6">Add New Product</h3>
+                <form class="space-y-6">
+                    <div>
+                        <label for="productName" class="block text-sm font-medium text-gray-700">Product Name</label>
+                        <input type="text" id="productName" placeholder="e.g., iPhone 15 Pro" required class="mt-1 block w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                    </div>
+                     <div>
+                        <label for="price" class="block text-sm font-medium text-gray-700">Price (LKR)</label>
+                        <input type="text" id="price" placeholder="e.g., 450000" required class="mt-1 block w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                    </div>
+                     <div>
+                        <label for="imageUrl" class="block text-sm font-medium text-gray-700">Image URL</label>
+                        <input type="text" id="imageUrl" placeholder="e.g., https://example.com/image.jpg" required class="mt-1 block w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                    </div>
+                    <div>
+                        <label for="description" class="block text-sm font-medium text-gray-700">Description</label>
+                        <textarea id="description" placeholder="e.g., 256GB, Deep Purple, A17 Bionic Chip" required rows="4" class="mt-1 block w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"></textarea>
+                    </div>
+                    <div>
+                         <button type="submit" class="w-full sm:w-auto flex justify-center py-3 px-8 border border-transparent rounded-lg shadow-sm text-lg font-bold text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition-transform transform hover:scale-105">Add Product</button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Product List -->
+            <div class="mt-12 bg-white p-8 rounded-2xl shadow-lg">
+                <h3 class="text-2xl font-bold text-gray-900 mb-6">Current Products</h3>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left">
+                        <thead class="bg-gray-50 border-b-2 border-gray-200">
+                            <tr>
+                                <th class="p-4 text-sm font-semibold text-gray-600 tracking-wider">Name</th>
+                                <th class="p-4 text-sm font-semibold text-gray-600 tracking-wider">Price (LKR)</th>
+                                <th class="p-4 text-sm font-semibold text-gray-600 tracking-wider">Image</th>
+                                <th class="p-4 text-sm font-semibold text-gray-600 tracking-wider">Description</th>
+                                <th class="p-4 text-sm font-semibold text-gray-600 tracking-wider">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-gray-200">
+                            <!-- Sample Row 1 -->
+                            <tr class="hover:bg-gray-50">
+                                <td class="p-4 whitespace-nowrap font-medium text-gray-800">iPhone 14</td>
+                                <td class="p-4 whitespace-nowrap text-gray-600">320,000</td>
+                                <td class="p-4"><img src="https://placehold.co/100x100/6366f1/FFFFFF?text=i14" alt="iPhone" class="table-img"/></td>
+                                <td class="p-4 text-gray-600 max-w-xs truncate">128GB Midnight</td>
+                                <td class="p-4 whitespace-nowrap">
+                                    <button class="text-blue-600 hover:text-blue-900 font-semibold mr-4">Edit</button>
+                                    <button class="text-red-600 hover:text-red-900 font-semibold">Delete</button>
+                                </td>
+                            </tr>
+                            <!-- Sample Row 2 -->
+                             <tr class="hover:bg-gray-50">
+                                <td class="p-4 whitespace-nowrap font-medium text-gray-800">Samsung Galaxy S23</td>
+                                <td class="p-4 whitespace-nowrap text-gray-600">285,000</td>
+                                <td class="p-4"><img src="https://placehold.co/100x100/10b981/FFFFFF?text=S23" alt="Samsung" class="table-img"/></td>
+                                <td class="p-4 text-gray-600 max-w-xs truncate">256GB Phantom Black</td>
+                                <td class="p-4 whitespace-nowrap">
+                                    <button class="text-blue-600 hover:text-blue-900 font-semibold mr-4">Edit</button>
+                                    <button class="text-red-600 hover:text-red-900 font-semibold">Delete</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
+
