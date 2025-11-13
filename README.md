@@ -8,7 +8,6 @@ Built with **HTML**, **CSS (Tailwind)**, and **Vanilla JavaScript**. Includes ad
 ## 🚀 Live Demo
 If you enable GitHub Pages for this repository, your site will be available at:  
 `https://clerans.github.io/MC-MOBILE-WEB-Site/`  
-*(Replace with the actual URL if different.)*
 
 ---
 
@@ -103,7 +102,3 @@ Add images and reference them like:
 **MICHAEL CLERANS**  
 GitHub: https://github.com/Clerans
 
----
-
-## 📄 License
-Licensed under the **MIT License**.
